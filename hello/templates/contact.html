@@ -1,0 +1,93 @@
+{%extends "base.html"%}
+{% block title %}Contact{% endblock title %}
+{% block body %}
+
+
+
+<section class ="contact" style='position:relative;padding:50px 100px;display:flex;justify-content:center;align-items:center;flex-direction:column;background:url("https://source.unsplash.com/1280x900/?contact,phone");background-size:cover;padding:50px;'>
+<div class="content" style='max-width:800px;text-align:center;'>
+<h2 class="text-center" style='font-size:36px;font-weight:500;color:#fff;'> Contact Us</h2>
+<p style='font-weight:300;color:#fff;'>Lorem ipsum dolor sit amet,consectetur adipsicing elit ,sed do eiusmod tempor incididunt ut labore et dalore
+magna aliqua. Ut enim ad minim veniam.</p>
+</div>
+<div class ="container" style='width:100%;display:flex;justify-content:center;align-items:center;margin-top:30px;'
+>
+
+
+<div class="contactInfo" style='width:50%;display:flex;flex-direction:column; margin-bottom:40px;width:100%;'>
+<div class="box" style='position:relative;padding:20px 0;display:flex;'>
+<div class="icon" ></div>
+<div class="text" style='display:flex;margin-left:20px;font-size:16px;color:#fff;flex-direction:column;
+font-weight:300;'>
+<h3 style='font-weight:500;color:#00bcd4;'> Address</h3>
+<p>4671 Sugar colony <br> Raj Nagar Extension<br>ghaziabad<br>1567889</p> 
+</div>
+</div>
+<div class="box" style='position:relative;padding:20px 0;display:flex;'>
+<div class="icon"></div>
+<div class="text" style='display:flex;margin-left:20px;font-size:16px;color:#fff;flex-direction:column;
+font-weight:300;'>
+<h3 style='font-weight:500;color:#00bcd4;'>Phone</h3>
+
+<p>507-475-6094</p>
+</div>
+</div>
+<div class="box" style='position:relative;padding:20px 0;display:flex;'>
+<div class="icon"></div>
+<div class="text" style='display:flex;margin-left:20px;font-size:16px;color:#fff;flex-direction:column;
+font-weight:300;'>
+<h3 style='font-weight:500;color:#00bcd4;'>Email</h3>
+
+<p>55555555@gmail.com</p>
+</div>
+</div>
+</div>
+
+
+
+
+<form method ="post" action="/contact" style='width:60%; padding:40px;background:#fff;'>
+{% csrf_token %}
+
+
+<div class="form-group mb-3">
+    <label for="name" style=' font-size:30px;color:#333;font-weight:500;'>Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name" style='position:relative;width:100%;
+    margin-top:10px;' >
+    
+  </div>
+
+
+
+  <div class="form-group mb-3">
+    <label for="email" style=' font-size:30px;color:#333;font-weight:500;'>Email address</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email">
+    
+  </div>
+  <div class="form-group mb-3">
+    <label for="phone" style=' font-size:30px;color:#333;font-weight:500;'>Phone Number</label>
+    <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your Phone Number">
+    
+  </div>
+  <div class="form-group mb-3">
+    
+    <label for="desc"style=' font-size:30px;color:#333;font-weight:500;'>Tell me for what you want to contact us.....</label>
+    <textarea class ="form-control" id="desc" rows="3" name="desc"></textarea>
+  </div>
+
+  <button type="submit" class="btn pull-center btn-primary" style='width:100px;background:#00bcd4;color:#fff;border:none;cursor:pointer;padding:10px;font-size:18px;'>Submit</button>
+</form>
+<footer style=' background:#000;color:#fff;padding:9px 20px; flex-direction:column;' >
+<div class ="center" >
+  Copyright &copy; www.MyIceCream.com. All rights reserved!
+</div>
+</footer>
+
+</section>
+
+
+{% endblock body %}
+
+
+
+
